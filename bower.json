@@ -1,0 +1,15 @@
+{
+  "name": "bem-content",
+  "version": "1.0.0",
+  "authors": [
+    "4ok"
+  ],
+  "description": "Content in BEM terms",
+  "keywords": [
+    "bem",
+    "bem-content",
+    "bem-text"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/4ok/bem-content"
+}
