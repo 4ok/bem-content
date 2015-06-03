@@ -1,0 +1,16 @@
+block('content').elem('header')
+(
+    tag()(function () {
+        var ctx = this.ctx;
+
+        var level = (ctx.mods && ctx.mods.level)
+            ? ctx.mods.level
+            : 1;
+
+        if (level < 1) {
+            level = 1;
+        }
+
+        return 'h' + level;
+    })
+);

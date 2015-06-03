@@ -1,0 +1,9 @@
+({
+    shouldDeps : [
+        {
+            mods : {
+                role : 'header'
+            }
+        }
+    ]
+});

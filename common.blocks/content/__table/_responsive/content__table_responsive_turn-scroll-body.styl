@@ -1,0 +1,53 @@
+@media $small_only
+   .content
+
+        &__table
+
+            &_responsive
+
+                &_turn-scroll-body
+                    display block
+                    position relative
+                    font-size 0.75rem
+
+                    &:before
+                        content 'ⓘ Если таблица не помещается на вашем экране, вы можете прокручивать ее влево/вправо'
+                        display block
+                        margin-bottom 5px
+                        color #888
+
+                    &:after
+                        content ' '
+                        position absolute
+                        top 0
+                        right 0
+                        display block
+                        width 20px
+                        background linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+                        height 100%
+
+                    .table
+
+                        &__cell
+                            display block
+
+                        &__header
+                            display block
+                            float left
+
+                            .table
+                                &__row
+                                    display block
+
+                        &__body
+                            display block
+                            width auto
+                            overflow-x auto
+                            white-space nowrap
+
+                        &__body
+
+                            .table
+
+                                &__row
+                                    display inline-block
