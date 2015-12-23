@@ -1,6 +1,6 @@
 {
   "name": "bem-content",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "authors": [
     "4ok"
   ],
@@ -11,5 +11,8 @@
     "bem-text"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/4ok/bem-content"
+  "homepage": "https://github.com/4ok/bem-content",
+  "dependencies": {
+    "bem-blocks": "https://github.com/4ok/bem-blocks.git"
+  }
 }
