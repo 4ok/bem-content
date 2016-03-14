@@ -1,8 +1,8 @@
 block('content').elem('link')
 (
     def()(function() {
-        var ctx = this.ctx;
-        var mix = [];
+        const ctx = this.ctx;
+        let mix   = [];
 
         mix.push({
             block: this.block,

@@ -2,7 +2,9 @@
     shouldDeps : [
         {
             mods : {
-                'text-align' : ['right']
+                'text-align' : [
+                    'right'
+                ]
             }
         }
     ]

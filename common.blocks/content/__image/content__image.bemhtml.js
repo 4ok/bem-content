@@ -1,23 +1,23 @@
 block('content').elem('image')
 (
-    def()(function() {
-        var ctx  = this.ctx;console.log(ctx)
-        var mods = ctx.mods;
-        var mix  = {
+    replace()(function() {
+        let ctx = this.ctx;
+
+        const mods = this.mods;
+        let mix    = {
             block: this.block,
             elem:  this.elem
         };
 
         if (mods) {
             mix.mods = mods;
-
             delete ctx.mods;
         }
 
         delete ctx.elem;
 
-        ctx.block = 'image';
-        ctx.mix   = mix;
+        this.block = 'image';
+        this.mix   = mix;
 
         if (mods && 'right' == mods.align) {
             ctx = {
@@ -27,8 +27,8 @@ block('content').elem('image')
                 },
                 content : ctx
             }
-        }//console.log('!',ctx)
+        }
 
-        return applyCtx(ctx);
+        return ctx;
     })
 );

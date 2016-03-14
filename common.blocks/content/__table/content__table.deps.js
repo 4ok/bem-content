@@ -2,7 +2,9 @@
     shouldDeps: [
         {
             mods : {
-                responsive : ['turn-scroll-body']
+                responsive : [
+                    'turn-scroll-body'
+                ]
             }
         }
     ]
