@@ -1,6 +1,6 @@
 block('content').elem('link')
 (
-    def()(function() {
+    replace()(function() {
         const ctx = this.ctx;
         let mix   = [];
 
@@ -29,6 +29,6 @@ block('content').elem('link')
         ctx.block = 'link';
         ctx.mix   = mix;
 
-        return applyCtx(ctx);
+        return ctx;
     })
 );
