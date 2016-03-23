@@ -1,15 +1,6 @@
-block('content')
+block('content').elem('*').match(function () { return this.block == 'content' })
 (
-    elemMatch(function() {
-        const ctx = this.ctx;
-
-        return ctx.elem;
+    tag()(function() {
+        return this.elem;
     })
-    (
-        tag()(function() {
-            const ctx = this.ctx;
-
-            return ctx.elem;
-        })
-    )
 );
