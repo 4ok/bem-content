@@ -1,10 +1,11 @@
-block('content').elem('header').elemMod('level')
-(
-    tag()(function () { // TODO: not work
-        const level = (this.elemMods.level > 0)
-            ? this.mods.level
-            : 1;
+block('content')
+    .elem('header')
+    .match(function () {
+        const level = this.elemMods.level;
 
-        return 'h' + level;
-    })
-);
+        return level >= 1 && level <= 6;
+    })(
+        tag()(function () {
+            return 'h' + this.elemMods.level;
+        })
+    );

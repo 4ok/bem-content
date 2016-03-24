@@ -3,20 +3,12 @@
         {
             elems : [
                 'header',
-                'p',
-                'strong',
-                'address',
-                'wrapper',
-                'link',
                 'image',
+                'link',
                 'list',
-                'list-item',
+                'row',
                 'table',
-                'table-header',
-                'table-body',
-                'table-footer',
-                'table-row',
-                'table-cell'
+                'wrapper'
             ]
         },
         { block: 'link' },

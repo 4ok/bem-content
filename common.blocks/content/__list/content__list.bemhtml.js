@@ -1,4 +1,4 @@
-block('content').elem('list')
-(
+block('content').elem('list')(
+
     tag()('ul')
 );

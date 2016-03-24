@@ -1,4 +1,4 @@
-block('content').elem('list-item')
-(
+block('content').elem('list-item')(
+
     tag()('li')
 );

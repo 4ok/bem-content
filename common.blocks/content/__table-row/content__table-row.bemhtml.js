@@ -1,4 +1,4 @@
-block('content').elem('table-row')
-(
+block('content').elem('table-row')(
+
     tag()('tr')
 );

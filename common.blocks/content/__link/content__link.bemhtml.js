@@ -1,6 +1,6 @@
-block('content').elem('link')
-(
-    replace()(function() {
+block('content').elem('link')(
+
+    replace()(function() { // TODO: optimization code
         const ctx = this.ctx;
         let mix   = [];
 

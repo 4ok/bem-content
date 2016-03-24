@@ -1,4 +1,4 @@
-block('content').elem('wrapper')
-(
+block('content').elem('wrapper')(
+
     tag()('div')
 );

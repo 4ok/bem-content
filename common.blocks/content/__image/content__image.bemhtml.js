@@ -1,5 +1,5 @@
-block('content').elem('image')
-(
+block('content').elem('image')(
+
     replace()(function() {
         let ctx = this.ctx;
 

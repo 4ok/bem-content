@@ -1,4 +1,4 @@
-block('content').elem('table-header')
-(
+block('content').elem('table-header')(
+
     tag()('thead')
 );

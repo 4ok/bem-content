@@ -1,4 +1,4 @@
-block('content').elem('table-footer')
-(
+block('content').elem('table-footer')(
+
     tag()('tfoot')
 );
