@@ -1,11 +1,6 @@
 block('content')
     .elem('header')
-    .match(function () {
-        const level = this.elemMods.level;
+    .match(ctx => ctx.elemMods.level >= 1 && ctx.elemMods.level <= 6)(
 
-        return level >= 1 && level <= 6;
-    })(
-        tag()(function () {
-            return 'h' + this.elemMods.level;
-        })
+        tag()(ctx => 'h' + ctx.elemMods.level)
     );

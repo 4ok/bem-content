@@ -1,34 +1,33 @@
 block('content').elem('link')(
 
-    replace()(function() { // TODO: optimization code
-        const ctx = this.ctx;
-        let mix   = [];
+    def()((ctx, json) => { // TODO: replace, optimization code
+        let mix = [];
 
         mix.push({
-            block: this.block,
-            elem:  this.elem
+            block: ctx.block,
+            elem:  ctx.elem
         });
 
-        if (ctx.mix) {
+        if (json.mix) {
 
-            if (this.isArray(ctx.mix)) {
-                mix = mix.concat(ctx.mix);
+            if (Array.isArray(json.mix)) {
+                mix = mix.concat(json.mix);
             } else {
-                mix.push(ctx.mix);
+                mix.push(json.mix);
             }
         }
 
         if (ctx.mods) {
             mix.mods = ctx.mods;
 
-            delete ctx.mods;
+            delete json.mods;
         }
 
-        delete ctx.elem;
+        delete json.elem;
 
-        ctx.block = 'link';
-        ctx.mix   = mix;
+        json.block = 'link';
+        json.mix   = mix;
 
-        return ctx;
+        return applyCtx(json);
     })
 );

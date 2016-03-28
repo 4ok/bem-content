@@ -1,34 +1,34 @@
 block('content').elem('image')(
 
-    replace()(function() {
-        let ctx = this.ctx;
+    def()((ctx, json) => { // TODO: replace, wrapper
 
-        const mods = this.mods;
-        let mix    = {
-            block: this.block,
-            elem:  this.elem
+        // TODO: mods => elemMods, markdown-converter
+        const mods = ctx.mods;
+        const mix  = {
+            block: ctx.block,
+            elem:  ctx.elem
         };
 
         if (mods) {
             mix.mods = mods;
-            delete ctx.mods;
+            delete json.mods;
         }
 
-        delete ctx.elem;
+        delete json.elem;
 
-        this.block = 'image';
-        this.mix   = mix;
+        json.block = 'image';
+        json.mix   = mix;
 
-        if (mods && 'right' == mods.align) {
-            ctx = {
+        if (mods && mods.align == 'right') {
+            json = {
                 elem : 'wrapper',
                 mods : {
                     'text-align': 'right'
                 },
-                content : ctx
+                content : json
             }
         }
 
-        return ctx;
+        return applyCtx(json);
     })
 );

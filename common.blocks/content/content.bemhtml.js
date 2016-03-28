@@ -1,9 +1,4 @@
-block('content')
-    .elem('*')
-    .match(function () {
-        return (this.block == 'content')
-    })(
-        tag()(function () {
-            return applyNext() || this.elem;
-        })
-    );
+block('content').elem('*').match(ctx => (ctx.block == 'content'))(
+
+    tag()(ctx => applyNext() || ctx.elem)
+);
