@@ -1,4 +1,4 @@
-block('content').elem('link')(
+block('content').elem('a')(
 
     def()((ctx, json) => { // TODO: replace, optimization code
         let mix = [];

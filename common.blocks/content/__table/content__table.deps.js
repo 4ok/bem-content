@@ -7,11 +7,12 @@
                 ]
             },
             elems : [
-                'table-row',
-                'table-header',
-                'table-body',
-                'table-cell',
-                'table-footer'
+                'tr',
+                'th',
+                'td',
+                'thead',
+                'tbody',
+                'tfoot'
             ]
         }
     ]

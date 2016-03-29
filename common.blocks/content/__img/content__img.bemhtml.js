@@ -1,4 +1,4 @@
-block('content').elem('image')(
+block('content').elem('img')(
 
     def()((ctx, json) => { // TODO: replace, wrapper
 

@@ -2,13 +2,9 @@
     shouldDeps : [
         {
             elems : [
-                'header',
-                'image',
-                'link',
-                'list',
-                'row',
-                'table',
-                'wrapper'
+                'a',
+                'img',
+                'row'
             ]
         },
         { block: 'link' },

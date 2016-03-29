@@ -1,9 +1,0 @@
-({
-    shouldDeps: [
-        {
-            elems : [
-                'list-item'
-            ]
-        }
-    ]
-});
