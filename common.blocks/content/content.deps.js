@@ -4,10 +4,10 @@
             elems : [
                 'a',
                 'img',
-                'row'
-            ]
+                'row',
+            ],
         },
-        { block: 'link' },
-        { block: 'image' }
-    ]
+        { block : 'link' },
+        { block : 'image' },
+    ],
 });
