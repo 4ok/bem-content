@@ -2,6 +2,7 @@ block('content').elem('img')(
 
     replace()((ctx, json) => ({
         block : 'image',
+        url : json.url,
         mix : [
             {
                 block : ctx.block,
