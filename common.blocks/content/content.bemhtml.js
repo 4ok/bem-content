@@ -2,22 +2,21 @@ block('content').elem('*').match(ctx => (ctx.block === 'content'))(
 
     match(ctx => /h([1-6])/.test(ctx.elem))(
 
-        mix()((ctx, bemjson) => {
+        mix()(ctx => {
             const headerLevel = /h([1-6])/.exec(ctx.elem);
-            const result = Object.assign(bemjson.mix || {}, {
+
+            return {
                 elem : 'h',
-                elemMods : {},
-            });
-
-            result.elemMods[headerLevel[1]] = true;
-
-            return result;
+                elemMods : {
+                    [headerLevel[1]] : true,
+                },
+            };
         })
     ),
 
     match(ctx => /t[dh]/.test(ctx.elem))(
 
-        mix()((ctx, bemjson) => Object.assign(bemjson.mix || {}, {
+        mix()(() => ({
             elem : 'tc',
         })
     )),
