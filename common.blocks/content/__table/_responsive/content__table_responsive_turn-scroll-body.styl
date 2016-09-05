@@ -6,48 +6,48 @@
             &_responsive
 
                 &_turn-scroll-body
-                    display block
-                    position relative
-                    font-size 0.75rem
+                    display: block
+                    font-size: .75rem
+                    position: relative
 
                     &:before
-                        content 'ⓘ Если таблица не помещается на вашем экране, вы можете прокручивать ее влево/вправо'
-                        display block
-                        margin-bottom 5px
-                        color #888
+                        color: #888
+                        content: 'ⓘ Если таблица не помещается на вашем экране, вы можете прокручивать ее влево/вправо'
+                        display: block
+                        margin-bottom: 5px
 
                     &:after
-                        content ' '
-                        position absolute
-                        top 0
-                        right 0
-                        display block
-                        width 20px
-                        background linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-                        height 100%
+                        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+                        content: ' '
+                        display: block
+                        height: 100%
+                        position: absolute
+                        right: 0
+                        top: 0
+                        width: 20px
 
                     .table
 
                         &__cell
-                            display block
+                            display: block
 
                         &__header
-                            display block
-                            float left
+                            display: block
+                            float: left
 
                             .table
                                 &__row
-                                    display block
+                                    display: block
 
                         &__body
-                            display block
-                            width auto
-                            overflow-x auto
-                            white-space nowrap
+                            display: block
+                            overflow-x: auto
+                            white-space: nowrap
+                            width: auto
 
                         &__body
 
                             .table
 
                                 &__row
-                                    display inline-block
+                                    display: inline-block
