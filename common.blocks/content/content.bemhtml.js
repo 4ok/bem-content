@@ -8,7 +8,7 @@ block('content').elem('*').match(ctx => (ctx.block === 'content'))(
             return {
                 elem : 'h',
                 elemMods : {
-                    [headerLevel[1]] : true,
+                    level : headerLevel[1],
                 },
             };
         })
