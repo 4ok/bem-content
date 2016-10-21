@@ -1,11 +1,6 @@
 ({
     shouldDeps : [
         {
-            mods : {
-                type : 'article',
-            }
-        },
-        {
             elems : [
                 'a',
                 'img',
