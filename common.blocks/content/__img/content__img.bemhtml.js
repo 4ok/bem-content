@@ -9,7 +9,8 @@ block('content').elem('img')(
                 elem : ctx.elem,
                 mods : ctx.mods,
             },
-        ]
-        .concat(json.mix || []),
+        ].concat(
+            json.mix || []
+        ),
     }))
 );

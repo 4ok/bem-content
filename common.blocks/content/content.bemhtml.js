@@ -18,8 +18,8 @@ block('content').elem('*').match(ctx => (ctx.block === 'content'))(
 
         mix()(() => ({
             elem : 'tc',
-        })
-    )),
+        }))
+    ),
 
     tag()(ctx => applyNext() || ctx.elem)
 );
