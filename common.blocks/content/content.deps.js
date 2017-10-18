@@ -1,7 +1,7 @@
 ({
-    shouldDeps : [
+    shouldDeps: [
         {
-            elems : [
+            elems: [
                 'a',
                 'img',
                 'row',
