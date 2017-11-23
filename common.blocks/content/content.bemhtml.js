@@ -2,14 +2,15 @@ block('content').elem('*').match(ctx => (ctx.block === 'content'))(
 
     match(ctx => /h([1-6])/.test(ctx.elem))(
 
-        mix()((ctx) => {
+        mix()((ctx, json) => {
             const headerLevel = /h([1-6])/.exec(ctx.elem);
 
             return {
                 elem: 'h',
-                elemMods: {
+                elemMods: Object.assign({
                     level: headerLevel[1],
-                },
+                }, json.elemMods || {}),
+                mix: json.mix,
             };
         })
     ),
